@@ -90,13 +90,11 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        print("start thayu")
         isKeyboardOpen = true
         viewWillLayoutSubviews()
     }
 
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        print("end thayu")
         self.view.endEditing(true)
         isKeyboardOpen = false
         searchBar.resignFirstResponder()
